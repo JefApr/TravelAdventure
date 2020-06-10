@@ -1,0 +1,131 @@
+:root {
+  --font-body: "Montserrat", sans-serif;
+  --font-title: "Roboto", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-title);
+  min-height: 100%;
+}
+
+.main,
+.about {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.main {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.about {
+  margin-top: 100vh;
+}
+
+.navbar {
+  position: absolute;
+  z-index: 1;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  color: white;
+}
+
+.options {
+  list-style: none;
+}
+
+.options a {
+  text-decoration: none;
+}
+
+.options li {
+  float: left;
+  margin-right: 5px;
+}
+
+a[id="america"]:target ~ .main div.banner {
+  transform: translateY(0%);
+}
+
+a[id="europe"]:target ~ .main div.banner {
+  transform: translateY(-100%);
+}
+
+a[id="africa"]:target ~ .main div.banner {
+  transform: translateY(-200%);
+}
+
+a[id="asia"]:target ~ .main div.banner {
+  transform: translateY(-300%);
+}
+
+a[id="oceania"]:target ~ .main div.banner {
+  transform: translateY(-400%);
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  transform: translateZ(0);
+  transition: transform 1s ease-in-out;
+}
+
+.banner p {
+  color: white;
+  font-size: 5em;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 30%;
+  margin-left: 40px;
+}
+
+.america {
+  background: url("../../img/america/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.europe {
+  background: url("../../img/europe/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 110%;
+}
+
+.africa {
+  background: url("../../img/africa/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 110%;
+}
+
+.asia {
+  background: url("../../img/asia/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 110%;
+}
+
+.oceania {
+  background: url("../../img/oceania/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 110%;
+}
+
+.about {
+  background: url("../../img/about.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 50%;
+}
