@@ -11,25 +11,19 @@
   />
   <link rel="stylesheet" href="../styles/HomeStyles.css" />
   <body>
-    <div class="navbar">
-      <ul class="options">
-        <li>
-          <a href="#america"><span class="dot">1</span></a>
-        </li>
-        <li>
-          <a href="#europe"><span class="dot">2</span></a>
-        </li>
-        <li>
-          <a href="#africa"><span class="dot">3</span></a>
-        </li>
-        <li>
-          <a href="#asia"><span class="dot">4</span></a>
-        </li>
-        <li>
-          <a href="#oceania"><span class="dot">5</span></a>
-        </li>
-      </ul>
-    </div>
+    <div class="menu">
+      <div class="line"></div>
+      <div class="navigator">
+        <a href="#america"><span class="dot">1</span></a>
+        <a href="#europe"><span class="dot">2</span></a>
+        <a href="#africa"><span class="dot">3</span></a>
+        <a href="#asia"><span class="dot">4</span></a>
+        <a href="#oceania"><span class="dot">5</span></a>
+      </div>
+  </div>
+    
+<!-- BANNER AMERICA-->
+
     <a id="america"></a> <a id="europe"></a> <a id="africa"></a>
     <a id="asia"></a><a id="oceania"></a>
     <section class="main">
@@ -39,46 +33,328 @@
             <img src="../../img/america/background.jpg" alt="" />
           </div>
           <div class="filter"></div>
-
           <div class="explorer">
-            <h2 class="prev-continent">Oceania</h2>
+            <h2 class="prev-continent"><a href="#oceania">Oceania</a></h2>
             <div class="info">
               <h1 class="title">America</h1>
               <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati, tempora temporibus aperiam, enim corrupti nobis nam
-                fuga saepe ex voluptatum reiciendis laborum perspiciatis! Ab
-                sapiente cupiditate obcaecati praesentium similique nam.
+                The heart of America beats through towering forests, rolling
+                fields, highland deserts, and unconventional heavenly beaches.
+                In addition, this continent has three wonders of the modern
+                world.
               </p>
+              <button class="cta">
+                <span>Explore</span>
+                <img src="../../img/arrow.svg" />
+              </button>
             </div>
-            <button class="cta">Explore</button>
-            <h2 class="prev-continent">Europe</h2>
+            <h2 class="prev-continent"><a href="#europe">Europe</a></h2>
           </div>
           <div class="countries">
-            <div class="main-country">
-              <p>Brazil</p>
-              <div class="dotes"></div>
-              <img
-                src="../../img/america/brazil.jpg"
-                height="200px"
-                width="100px"
-                alt=""
-              />
+            <div class="gallery" id="gallery-america">
+              <div class="country-main">
+                <p>Brazil</p>
+                <div class="rating">
+                  <span class="vote"></span><span class="vote"></span
+                  ><span class="vote"></span><span class="vote"></span
+                  ><span></span>
+                </div>
+                <img class="photo" src="../../img/america/brazil.jpg" alt="" />
+              </div>
+              <div class="country">
+                <p class="title">Mexico</p>
+                <div class="rating">
+                  <span class="vote"></span><span class="vote"></span
+                  ><span class="vote"></span><span></span><span></span>
+                </div>
+                <img class="photo" src="../../img/america/mexico.jpg" alt="" />
+              </div>
+              <div class="country">
+                <p class="title">Canada</p>
+                <div class="rating">
+                  <span class="vote"></span><span class="vote"></span
+                  ><span class="vote"></span class="vote"><span></span class="vote"><span></span>
+                </div>
+                <img class="photo" src="../../img/america/canada.jpg" alt="" />
+              </div>
+              <div class="country">
+                <p class="title">Bahamas</p>
+                <div class="rating">
+                  <span class="vote"></span><span class="vote"></span
+                  ><span class="vote"></span class="vote"><span class="vote"></span class="vote"><span class="vote"></span>
+                </div>
+                <img class="photo" src="../../img/america/bahamas.jpg" alt="" />
+              </div>
+            </div>
+            <div class="buttons">
+              <button  class="prev" id="prev-america">
+                <img src="../../img/back.svg" alt="" />
+              </button>
+              <button class="next" id="next-america">
+                <img src="../../img/next.svg" alt="" />
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="banner europe">
-        <p>Europe</p>
-      </div>
-      <div class="banner africa">
-        <p>Africa</p>
+<!-- BANNER EUROPE-->
+
+           <div class="banner europe">
+        <div class="content">
+          <div class="background">
+            <img src="../../img/europe/background.jpg" alt="" />
+          </div>
+          <div class="filter"></div>
+          <div class="explorer">
+            <h2 class="prev-continent"><a href="#america">America</a></h2>
+            <div class="info">
+              <h1 class="title">Europe</h1>
+              <p class="description">
+                The heart of America beats through towering forests, rolling fields, highland deserts, and unconventional heavenly beaches.
+                In addition, this continent has three wonders of the modern
+                world.
+              </p>
+              <button class="cta">
+                <span>Explore</span>
+                <img src="../../img/arrow.svg" />
+              </button>
+            </div>
+            <h2 class="prev-continent"><a href="#africa">Africa</a></h2>
+          </div>
+          <div class="countries">
+            <div class="gallery" id="gallery-europe">
+              <div class="country-main">
+                <p>Iceland</p>
+                <div class="rating">
+                  <span class="vote"></span><span class="vote"></span
+                  ><span class="vote"></span><span class="vote"></span
+                  ><span></span>
+                </div>
+                <img class="photo" src="../../img/europe/iceland.jpg" alt="" />
+              </div>
+              <div class="country">
+                <p class="title">Norway</p>
+                <div class="rating">
+                  <span class="vote"></span><span class="vote"></span
+                  ><span class="vote"></span><span></span><span></span>
+                </div>
+                <img class="photo" src="../../img/europe/norway.jpg" alt="" />
+              </div>
+              <div class="country">
+                <p class="title">Holland</p>
+                <div class="rating">
+                  <span class="vote"></span><span class="vote"></span
+                  ><span class="vote"></span class="vote"><span></span class="vote"><span></span>
+                </div>
+                <img class="photo" src="../../img/europe/holland.jpg" alt="" />
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="prev" id="prev-europe">
+                <img src="../../img/back.svg" alt="" />
+              </button>
+              <button class="next" id="next-europe">
+                <img src="../../img/next.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="banner asia">
-        <p>Asia</p>
+      <!-- BANNER AFRICA-->
+
+      <div class="banner africa">
+      <div class="content">
+        <div class="background">
+          <img src="../../img/africa/background.jpg" alt="" />
+        </div>
+        <div class="filter"></div>
+        <div class="explorer">
+          <h2 class="prev-continent"><a href="#europe">Europe</a></h2>
+          <div class="info">
+            <h1 class="title">Africa</h1>
+            <p class="description">
+              The heart of America beats through towering forests, rolling fields, highland deserts, and unconventional heavenly beaches.
+              In addition, this continent has three wonders of the modern
+              world.
+            </p>
+            <button class="cta">
+              <span>Explore</span>
+              <img src="../../img/arrow.svg" />
+            </button>
+          </div>
+          <h2 class="prev-continent"><a href="#asia">Asia</a></h2>
+        </div>
+        <div class="countries">
+          <div class="gallery" id="gallery-africa">
+            <div class="country-main">
+              <p>Egypt</p>
+              <div class="rating">
+                <span class="vote"></span><span class="vote"></span
+                ><span class="vote"></span><span class="vote"></span
+                ><span></span>
+              </div>
+              <img class="photo" src="../../img/africa/egypth.jpg" alt="" />
+            </div>
+            <div class="country">
+              <p class="title">South Africa</p>
+              <div class="rating">
+                <span class="vote"></span><span class="vote"></span
+                ><span class="vote"></span><span></span><span></span>
+              </div>
+              <img class="photo" src="../../img/africa/south-africa.jpg" alt="" />
+            </div>
+            <div class="country">
+              <p class="title">Morocco</p>
+              <div class="rating">
+                <span class="vote"></span><span class="vote"></span
+                ><span class="vote"></span class="vote"><span></span class="vote"><span></span>
+              </div>
+              <img class="photo" src="../../img/africa/morocco.jpg" alt="" />
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="prev" id="prev-africa">
+              <img src="../../img/back.svg" alt="" />
+            </button>
+            <button class="next" id="next-africa">
+              <img src="../../img/next.svg" alt="" />
+            </button>
+          </div>
+        </div>
       </div>
+      </div>
+
+      <!-- BANNER ASIA-->
+
+      <div class="banner asia">
+        <div class="content">
+          <div class="background">
+            <img src="../../img/asia/background.jpg" alt="" />
+          </div>
+          <div class="filter"></div>
+          <div class="explorer">
+            <h2 class="prev-continent"><a href="#africa">Africa</a></h2>
+            <div class="info">
+              <h1 class="title">Asia</h1>
+              <p class="description">
+                The heart of America beats through towering forests, rolling fields, highland deserts, and unconventional heavenly beaches.
+                In addition, this continent has three wonders of the modern
+                world.
+              </p>
+              <button class="cta">
+                <span>Explore</span>
+                <img src="../../img/arrow.svg" />
+              </button>
+            </div>
+            <h2 class="prev-continent"><a href="#oceania">Oceania</a></h2>
+          </div>
+          <div class="countries">
+            <div class="gallery" id="gallery-asia">
+              <div class="country-main">
+                <p>Japon</p>
+                <div class="rating">
+                  <span class="vote"></span><span class="vote"></span
+                  ><span class="vote"></span><span class="vote"></span
+                  ><span></span>
+                </div>
+                <img class="photo" src="../../img/asia/japon.jpg" alt="" />
+              </div>
+              <div class="country">
+                <p class="title">Maldives</p>
+                <div class="rating">
+                  <span class="vote"></span><span class="vote"></span
+                  ><span class="vote"></span><span></span><span></span>
+                </div>
+                <img class="photo" src="../../img/asia/maldives.jpg" alt="" />
+              </div>
+              <div class="country">
+                <p class="title">Thailand</p>
+                <div class="rating">
+                  <span class="vote"></span><span class="vote"></span
+                  ><span class="vote"></span class="vote"><span></span class="vote"><span></span>
+                </div>
+                <img class="photo" src="../../img/asia/thailand.jpg" alt="" />
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="prev" id="prev-asia">
+                <img src="../../img/back.svg" alt="" />
+              </button>
+              <button class="next" id="next-asia">
+                <img src="../../img/next.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        </div>
+
+      <!-- BANNER OCEANIA-->
+
+      <div class="banner oceania">
+        <div class="content">
+          <div class="background">
+            <img src="../../img/oceania/background.jpg" alt="" />
+          </div>
+          <div class="filter"></div>
+          <div class="explorer">
+            <h2 class="prev-continent"><a href="#asia">Asia</a></h2>
+            <div class="info">
+              <h1 class="title">Oceania</h1>
+              <p class="description">
+                The heart of America beats through towering forests, rolling fields, highland deserts, and unconventional heavenly beaches.
+                In addition, this continent has three wonders of the modern
+                world.
+              </p>
+              <button class="cta">
+                <span>Explore</span>
+                <img src="../../img/arrow.svg" />
+              </button>
+            </div>
+            <h2 class="prev-continent"><a href="#america">America</a></h2>
+          </div>
+          <div class="countries">
+            <div class="gallery" id="gallery-oceania">
+              <div class="country-main">
+                <p>Fiji</p>
+                <div class="rating">
+                  <span class="vote"></span><span class="vote"></span
+                  ><span class="vote"></span><span class="vote"></span
+                  ><span></span>
+                </div>
+                <img class="photo" src="../../img/oceania/fiji.jpg" alt="" />
+              </div>
+              <div class="country">
+                <p class="title">New Zealand</p>
+                <div class="rating">
+                  <span class="vote"></span><span class="vote"></span
+                  ><span class="vote"></span><span></span><span></span>
+                </div>
+                <img class="photo" src="../../img/oceania/new zealand.jpg" alt="" />
+              </div>
+              <div class="country">
+                <p class="title">Australia</p>
+                <div class="rating">
+                  <span class="vote"></span><span class="vote"></span
+                  ><span class="vote"></span class="vote"><span></span class="vote"><span></span>
+                </div>
+                <img class="photo" src="../../img/oceania/australia.jpg" alt="" />
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="prev" id="prev-oceania">
+                <img src="../../img/back.svg" alt="" />
+              </button>
+              <button class="next" id="next-oceania">
+                <img src="../../img/next.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
       <div class="banner oceania">
         <p>Oceania</p>
       </div>
@@ -86,4 +362,29 @@
 
     <section class="about"></section>
   </body>
+<script>
+  window.onload = function() {
+    var buttonsNext =document.getElementsByClassName("next");
+    
+    for(var i=0; i<buttonsNext.length; i++){
+      buttonsNext[i].onclick= function(){
+        var continent= this.id.split('-')[1];
+        moveGallery(document.getElementById("gallery-"+continent), 200);
+      }
+    }
+
+    var buttonsPrev =document.getElementsByClassName("prev");
+    for(var i=0; i<buttonsPrev.length; i++){
+      buttonsPrev[i].onclick= function(){
+        var continent= this.id.split('-')[1];
+        moveGallery(document.getElementById("gallery-"+continent), -200);
+      }
+    }
+  }
+  function moveGallery(gallery, dimensionX){
+    gallery.scroll(gallery.scrollLeft+dimensionX,0);
+  }
+
+</script>
+
 </html>
