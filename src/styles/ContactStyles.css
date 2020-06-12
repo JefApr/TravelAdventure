@@ -16,6 +16,7 @@
 
 .background {
   height: 100vh;
+  width: 100vw;
 }
 
 .background-image {
@@ -208,21 +209,45 @@
   padding-left: 15%;
 }
 
+@media only screen and (max-width: 768px) {
+
+  .btn-container {
+    left: 60%;
+    bottom: -3%;
+  }
+
+  .background-form {
+    margin-left: 25%;
+    margin-top: 10%;
+  }
+
+  .form {
+    width: 65%;
+  }
+ 
+}
+
 @media only screen and (max-width: 425px) {
   .landing {
     display: none;
   }
 
   .form {
-    width: 130%;
+    width: 90%;
     justify-content: center;
     margin-top: 20%;
   }
 
   .btn-container {
+    width: 50%;
     left: 52%;
-    height: 8%;
-    width: 35%;
+    bottom: 2.5%;
+  }
+
+  .background-form {
+    margin-left: 0%;
+    margin-top: 0%;
+    width: 100%;
   }
 
   .form-container {
@@ -230,5 +255,9 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+  }
+
+  .upload p {
+    font-size: 0.8em;
   }
 }
