@@ -12,6 +12,8 @@
   --primary-twenty: rgba(255, 255, 255, 0.2);
   --primary-ten: rgba(255, 255, 255, 0.1);
   --transparent: rgba(255, 255, 255, 0);
+  --form-text-color: #050505;
+  --form-text-first: rgba(5, 5, 5, 0.6);
 }
 
 *,

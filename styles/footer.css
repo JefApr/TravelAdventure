@@ -3,7 +3,7 @@
   position: absolute;
   max-height: 17em;
   bottom: 0em;
-  background-image: url(/img/background.jpg);
+  background-image: url(../images/background.jpg);
 }
 
 .footer-container {
@@ -32,8 +32,8 @@
 }
 
 .information {
-  color: white;
-  font-family: "Roboto", sans-serif;
+  color: var(--primary-color);
+  font-family: var(--font-title);
 }
 
 .information .title-footer {

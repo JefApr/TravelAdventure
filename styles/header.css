@@ -1,6 +1,5 @@
 .nav-sections li a {
-  font-family: "Montserrat", sans-serif;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--primary-text);
   font-size: 1.0625em;
   font-weight: 500;
   text-decoration: none;
@@ -8,11 +7,11 @@
 }
 
 .nav-sections li .active {
-  color: white;
+  color: var(--primary-color);
 }
 
 .nav-sections li a:hover {
-  color: white;
+  color: var(--primary-color);
 }
 
 nav {

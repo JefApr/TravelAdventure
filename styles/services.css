@@ -9,7 +9,7 @@ html {
 .background-image-travel {
   background-repeat: no-repeat;
   height: 100%;
-  background-image: url(/img/services/travel/background.jpg);
+  background-image: url(../images/services/travel/background.jpg);
   position: relative;
   background-size: cover;
 }
@@ -27,7 +27,7 @@ html {
 .background-image-hotel {
   background-repeat: no-repeat;
   height: 100%;
-  background-image: url(/img/services/hotel/background.jpg);
+  background-image: url(../images/services/hotel/background.jpg);
   position: relative;
   background-size: cover;
 }
@@ -45,7 +45,7 @@ html {
 .background-image-tour {
   background-repeat: no-repeat;
   height: 100%;
-  background-image: url(/img/services/tour/background.jfif);
+  background-image: url(../images/services/tour/background.jfif);
   position: relative;
   background-size: cover;
 }
