@@ -175,6 +175,10 @@ html {
   z-index: 2;
 }
 
+.footer-background {
+  bottom: auto;
+}
+
 @media only screen and (max-width: 768px) {
   body {
     font-size: 8px;
