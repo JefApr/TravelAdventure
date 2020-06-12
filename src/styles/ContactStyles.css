@@ -1,0 +1,234 @@
+:root {
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+  --text-color: rgba(255, 255, 255, 0.8);
+  --form-text-color: #050505;
+  --form-text-first: rgba(5, 5, 5, 0.6);
+}
+
+*,
+*:before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  height: 100vh;
+}
+
+.background-image {
+  background-repeat: no-repeat;
+  height: 100%;
+  background-image: url(/img/contact/background.png);
+  position: relative;
+  background-size: cover;
+}
+
+.landing {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+}
+
+.emphasis {
+  background: -webkit-radial-gradient(
+    100000% 90%,
+    ellipse closest-corner,
+    rgba(255, 255, 255, 0.01),
+    rgba(255, 255, 255, 0.6)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 7em;
+  letter-spacing: 0.01em;
+  font-family: var(--font-primary);
+  line-height: 80%;
+  margin: 3%;
+}
+
+.title {
+  font-size: 4.5em;
+  font-family: var(--font-primary);
+  color: white;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  width: 50%;
+  height: 40%;
+}
+
+.form-container {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.form {
+  display: flex;
+  position: absolute;
+  margin-top: 6%;
+  width: 40%;
+  height: 70%;
+}
+
+.background-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  border-radius: 13px;
+  width: 70%;
+  height: 100%;
+}
+
+.background-form .title-form {
+  color: var(--form-text-color);
+  font-family: var(--font-primary);
+  font-size: 1em;
+  align-self: flex-start;
+  padding-left: 10%;
+}
+
+.input {
+  position: relative;
+  font-size: 1em;
+  width: 80%;
+  height: 50px;
+  overflow: hidden;
+}
+
+.input input {
+  width: 100%;
+  height: 100%;
+  color: var(--form-text-first);
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.input label {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid var(--form-text-first);
+  font-family: var(--font-secondary);
+}
+
+.input label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid var(--form-text-color);
+  left: 0;
+  bottom: -1px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-input {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.input input:focus + .label-input .content-input,
+.input input:valid + .label-input .content-input {
+  transform: translateY(-150%);
+  font-size: 0.8em;
+  color: var(--form-text-color);
+}
+
+.input input:focus + .label-input::after,
+.input input:valid + .label-input::after {
+  transform: translateX(0%);
+}
+
+.upload {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-items: center;
+  align-self: center;
+}
+
+.upload img {
+  width: 15%;
+  fill: var(--form-text-first);
+}
+
+.upload p {
+  font-family: var(--font-secondary);
+  color: #000000;
+  align-self: center;
+  padding: 2%;
+}
+
+.btn-container {
+  display: flex;
+  position: absolute;
+  z-index: 3;
+  width: 38%;
+  height: 10%;
+  bottom: 2.8%;
+  left: 35%;
+}
+
+.btn {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #232323;
+  border: none;
+  outline: none;
+}
+
+.btn a {
+  font-family: var(--font-secondary);
+  color: white;
+  font-size: 1em;
+  align-self: center;
+  padding-left: 15%;
+}
+
+@media only screen and (max-width: 425px) {
+  .landing {
+    display: none;
+  }
+
+  .form {
+    width: 130%;
+    justify-content: center;
+    margin-top: 20%;
+  }
+
+  .btn-container {
+    left: 52%;
+    height: 8%;
+    width: 35%;
+  }
+
+  .form-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+}
