@@ -1,0 +1,29 @@
+:root {
+  --font-body: "Montserrat", sans-serif;
+  --font-title: "Roboto", sans-serif;
+  --america: #174052;
+  --europe: #464457;
+  --africa: #5f3231;
+  --asia: #33765f;
+  --oceania: #bd9275;
+  --primary-text: rgba(255, 255, 255, 0.8);
+  --primary-color: #ffffff;
+  --primary-fifty: rgba(255, 255, 255, 0.5);
+  --primary-twenty: rgba(255, 255, 255, 0.2);
+  --primary-ten: rgba(255, 255, 255, 0.1);
+  --transparent: rgba(255, 255, 255, 0);
+}
+
+*,
+*:before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  min-height: 100vh;
+  color: var(--primary-color);
+}
