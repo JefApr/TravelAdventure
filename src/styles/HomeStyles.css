@@ -200,6 +200,8 @@ a[id="oceania"]:target ~ .main div.banner {
 
 .countries {
   margin-left: 10%;
+
+  width: 60%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -222,19 +224,19 @@ a[id="oceania"]:target ~ .main div.banner {
 .countries .gallery {
   overflow-x: scroll;
   overflow: hidden;
-  max-width: 60%;
   display: flex;
+  padding-bottom: 2em;
   align-items: flex-end;
 }
 
-.countries.gallery:first-child {
-  padding-left: 5000px;
-}
-
-.countries .gallery img {
+.countries .gallery .photo {
   margin-right: 2em;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2), 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0.5em;
+}
+
+.countries .gallery .country:last-child .photo {
+  margin-right: 200%;
 }
 
 .countries .gallery .country-main .photo {
@@ -265,6 +267,13 @@ a[id="oceania"]:target ~ .main div.banner {
 .banner .background img {
   height: 100vh;
   min-width: 100%;
+}
+
+.services {
+  position: absolute;
+  margin-top: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 @media only screen and (max-width: 768px) {
