@@ -1,0 +1,91 @@
+.footer-background {
+  width: 100%;
+  position: absolute;
+  max-height: 17em;
+  bottom: 0em;
+  background-image: url(/img/background.jpg);
+}
+
+.footer-container {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 4%;
+}
+
+.mountain {
+  height: 70%;
+  width: 25%;
+}
+
+.images {
+  max-width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.images img {
+  width: 15%;
+  margin: 0% 5%;
+}
+
+.information {
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.information .title-footer {
+  font-size: 1em;
+  font-weight: 300;
+  margin: 2%;
+}
+
+.information .email {
+  padding: 4%;
+  font-size: 1em;
+}
+
+.information .cellphone {
+  font-size: 1em;
+  margin: 2%;
+}
+
+@media only screen and (max-width: 425px) {
+  .mountain {
+    display: none;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .information {
+    width: 100%;
+  }
+
+  .information .info-adventure {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0% 2%;
+  }
+
+  .images {
+    max-width: 80%;
+    margin-top: 4%;
+  }
+
+  .information .email,
+  .information .cellphone {
+    margin: 0;
+    padding: 0;
+  }
+
+  .information .title-footer,
+  .information .info-adventure .email,
+  .information .info-adventure .cellphone {
+    font-size: 0.75em;
+  }
+}
