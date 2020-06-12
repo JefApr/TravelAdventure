@@ -1,0 +1,274 @@
+:root {
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+  --text-color: rgba(255, 255, 255, 0.8);
+  --emphasis-color: ;
+}
+
+*,
+*:before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.background-image-travel {
+  background-repeat: no-repeat;
+  height: 100%;
+  background-image: url(/img/services/travel/background.jpg);
+  position: relative;
+  background-size: cover;
+}
+
+.background-image-travel::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(48, 48, 48, 0.5) 61.46%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.background-image-hotel {
+  background-repeat: no-repeat;
+  height: 100%;
+  background-image: url(/img/services/hotel/background.jpg);
+  position: relative;
+  background-size: cover;
+}
+
+.background-image-hotel::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(48, 48, 48, 0.5) 61.46%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.background-image-tour {
+  background-repeat: no-repeat;
+  height: 100%;
+  background-image: url(/img/services/tour/background.jfif);
+  position: relative;
+  background-size: cover;
+}
+
+.background-image-tour::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(48, 48, 48, 0.5) 61.46%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.value-proposition {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 60%;
+  height: 35%;
+}
+
+.emphasis {
+  background: -webkit-radial-gradient(
+    100000% 90%,
+    ellipse closest-corner,
+    rgba(255, 255, 255, 0.01),
+    rgba(255, 255, 255, 0.6)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 8em;
+  letter-spacing: 0.01em;
+  font-family: var(--font-primary);
+  line-height: 80%;
+}
+
+.title {
+  font-size: 4.8em;
+  font-family: var(--font-primary);
+  color: white;
+}
+
+.text {
+  font-family: var(--font-secondary);
+  color: var(--text-color);
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  margin: 8px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  height: 65%;
+}
+
+.card {
+  width: 27%;
+  height: 80%;
+  background: rgba(87, 89, 91, 0.35);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  margin-top: 8%;
+  text-align: center;
+}
+
+.img {
+  margin-top: 2%;
+  width: 94%;
+  height: 52%;
+  border-radius: 8px;
+}
+
+.title-card {
+  font-family: var(--font-primary);
+  color: white;
+  font-size: 2em;
+  font-weight: 500;
+  padding: 2%;
+}
+
+.card p {
+  font-family: var(--font-secondary);
+  color: var(--text-color);
+  font-size: 0.8em;
+  letter-spacing: 2.5%;
+  padding: 3%;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 768px) {
+  .emphasis {
+    font-size: 6em;
+  }
+
+  .title {
+    font-size: 3.8em;
+  }
+
+  .text {
+    font-size: 0.8em;
+  }
+
+  .value-proposition {
+    margin-top: 8%;
+    height: 30%;
+  }
+
+  .title-card {
+    font-size: 1.5em;
+  }
+
+  .card {
+    height: 70%;
+  }
+
+  .img {
+    margin-top: 4%;
+    height: 32%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .value-proposition {
+    margin-top: 20%;
+    width: 90%;
+  }
+
+  .emphasis {
+    font-size: 3em;
+  }
+
+  .title {
+    margin-top: 5%;
+    font-size: 2.5em;
+  }
+
+  .text {
+    font-size: 0.625em;
+    letter-spacing: 0.025em;
+    line-height: 27px;
+  }
+
+  .title-card {
+    font-size: 1em;
+  }
+
+  .card p {
+    font-size: 0.625em;
+  }
+
+  .cards {
+      width: auto;
+      height: 60%;
+      overflow-x: scroll;
+  }
+
+  .card {
+    width: 224px;
+    height: 238px;
+    margin-left: 5%;
+    margin-left: 5%;
+  }
+
+  .img {
+    margin-top: 4%;
+    width: 200px;
+    height: 151px;
+    padding: 0% 4%;
+    border-radius: 12px;
+  }
+}
