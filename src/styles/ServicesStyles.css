@@ -206,6 +206,10 @@ html {
     margin-top: 4%;
     height: 40%;
   }
+
+  .footer-background {
+    font-size: 2em;
+  }
 }
 
 @media only screen and (max-width: 425px) {
