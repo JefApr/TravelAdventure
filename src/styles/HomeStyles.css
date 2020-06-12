@@ -7,6 +7,8 @@
   --africa: #5f3231;
   --asia: #33765f;
   --oceania: #bd9275;
+  --white-fifty: rgba(255, 255, 255, 0.5);
+  --white-eighty: rgba(255, 255, 255, 0.8);
 }
 
 * {
@@ -19,10 +21,16 @@ body {
   min-height: 100%;
   color: var(--primary-text);
 }
+a {
+  text-decoration: none;
+}
 
 .main,
 .about,
-.banner .background,
+.services,
+.services .navigator,
+.about,
+.background,
 .content,
 .filter {
   width: 100%;
@@ -30,16 +38,23 @@ body {
   position: absolute;
 }
 
-.main {
+.main,
+.services {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
 .about {
-  margin-top: 100vh;
+  margin-top: 200vh;
 }
 
-.filter {
+.banner .filter {
   background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0) 0%);
+}
+
+.services .filter,
+.about .filter {
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.2) 0%);
 }
 
 .menu {
@@ -52,36 +67,24 @@ body {
 
 .line {
   position: absolute;
-  height: 80%;
+  height: 70%;
   width: 0.2em;
   margin-left: 2em;
   background: rgba(255, 255, 255, 0.1);
   z-index: 1;
 }
 
-.navigator {
+.main .navigator {
   margin-left: 2em;
   position: absolute;
   display: flex;
   flex-direction: column;
   z-index: 2;
-  height: 80%;
+  height: 70%;
   justify-content: space-between;
 }
 
-.navigator a {
-  text-decoration: none;
-}
-
-.navigator .line {
-  position: absolute;
-  height: 73%;
-  background: aqua;
-  width: 0.5em;
-  z-index: 1;
-}
-
-.navigator .dot {
+.main .navigator .dot {
   height: 2em;
   width: 2em;
   background-color: rgba(255, 255, 255, 0.2);
@@ -115,6 +118,18 @@ a[id="oceania"]:target ~ .main div.banner {
   transform: translateY(-400%);
 }
 
+a[id="tour"]:target ~ .services div.content {
+  transform: translateY(0%);
+}
+
+a[id="travel"]:target ~ .services div.content {
+  transform: translateX(-100%);
+}
+
+a[id="hotel"]:target ~ .services div.content {
+  transform: translateX(-200%);
+}
+
 .banner {
   width: 100%;
   height: 100vh;
@@ -135,10 +150,11 @@ a[id="oceania"]:target ~ .main div.banner {
   margin-left: 6em;
 }
 
-.banner .info .title {
+.info .title {
   font-size: 6em;
 }
-.banner .info .description {
+
+.info .description {
   padding: 2em 0;
   font-family: var(--font-body);
   font-weight: 300;
@@ -148,18 +164,19 @@ a[id="oceania"]:target ~ .main div.banner {
   letter-spacing: 0.025em;
 }
 
-.banner .info .cta {
+.info .cta {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
   color: white;
   outline: none;
-  font-size: 1.1em;
+  font-size: 1em;
   border: none;
   font-family: var(--font-body);
   font-weight: 600;
   border-radius: 0.3em;
   cursor: pointer;
-  padding: 1em 1.5em;
+  padding: 1em;
 }
 
 .america .info .cta {
@@ -182,13 +199,19 @@ a[id="oceania"]:target ~ .main div.banner {
   background-color: var(--oceania);
 }
 
-.banner .info .cta img {
+.service .info .cta {
+  width: 9em;
+  background-color: var(--white-fifty);
+}
+
+.info .cta img {
   margin-left: 2.5em;
   opacity: 0.6;
   height: 0.8em;
 }
 
-.banner .prev-continent {
+.banner .prev-continent,
+.services .info .shadow {
   font-size: 3em;
   background: -webkit-linear-gradient(
     rgba(255, 255, 255, 0.9),
@@ -198,9 +221,12 @@ a[id="oceania"]:target ~ .main div.banner {
   -webkit-text-fill-color: transparent;
 }
 
+.banner .prev-continent:first-child {
+  margin-top: 1em;
+}
+
 .countries {
   margin-left: 10%;
-
   width: 60%;
   position: relative;
   display: flex;
@@ -264,21 +290,133 @@ a[id="oceania"]:target ~ .main div.banner {
   cursor: pointer;
 }
 
-.banner .background img {
+.background img {
+  left: 0;
+  top: 0;
   height: 100vh;
-  min-width: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.section-services {
+  position: absolute;
+  margin-top: 100vh;
 }
 
 .services {
-  position: absolute;
   margin-top: 100vh;
-  width: 100%;
+  max-width: 100%;
+}
+
+.services .content {
   height: 100vh;
+  display: flex;
+  position: relative;
+  transition: transform 1s ease-in-out;
+}
+
+.services .content .service {
+  min-width: 100%;
+  height: 100vh;
+}
+.services .navigator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services .tour .navigator {
+  justify-content: flex-end;
+}
+
+.services .hotel .navigator {
+  justify-content: flex-start;
+}
+
+.services .navigator .button {
+  padding: 3em 1.5em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.services .navigator .button.prev {
+  border-radius: 0 1em 1em 0;
+}
+
+.services .navigator .button.next {
+  border-radius: 1em 0 0 1em;
+}
+
+.services .info,
+.about .info {
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.services .info {
+  width: 50%;
+  justify-content: center;
+  margin-left: 10em;
+}
+
+.services .info .shadow {
+  font-size: 6em;
+}
+
+.services .info .title {
+  font-size: 4em;
+}
+
+.about .info {
+  width: 100%;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.about .info .title,
+.about .info .description {
+  text-align: right;
+  margin-top: 1em;
+  margin-right: 10%;
+}
+
+.about .info .title {
+  font-family: var(--font-title);
+  font-size: 5em;
+  width: 70%;
+}
+
+.about .info .description {
+  line-height: 2em;
+  letter-spacing: 0.12em;
+  width: 45%;
+  font-size: 1em;
 }
 
 @media only screen and (max-width: 768px) {
   body {
     font-size: 8px;
+  }
+
+  .info .description {
+    font-size: 2em;
+  }
+
+  .info .cta {
+    font-size: 2em;
+  }
+
+  .countries .buttons button {
+    font-size: 4em;
+  }
+
+  .about .info .description {
+    font-size: 1.5em;
+    width: 50%;
   }
 }
 
@@ -288,23 +426,45 @@ a[id="oceania"]:target ~ .main div.banner {
     display: none;
   }
 
+  .background img {
+    position: absolute;
+    clip: rect(0px, 100%, 100%, 0px);
+  }
+
   .banner .content .explorer {
     margin: 0 3em;
     width: 100%;
     text-align: center;
   }
 
-  .banner .info {
+  .info {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
 
-  .banner .info .description {
+  .info .title,
+  .info .description {
     text-align: center;
   }
 
-  .banner .info .cta {
-    font-size: 2em;
+  .info .description {
+    font-weight: 400;
+  }
+
+  .services .info {
+    width: 60%;
+  }
+
+  .about .info {
+    align-items: center;
+  }
+
+  .about .info .description {
+    width: 80%;
+    margin-right: 0;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.7em;
   }
 }

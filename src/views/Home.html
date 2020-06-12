@@ -10,23 +10,40 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="../styles/HomeStyles.css" />
+  <link rel="stylesheet" href="../styles/HeaderStyles.css" />
   <body>
-    <div class="menu">
-      <div class="line"></div>
-      <div class="navigator">
-        <a href="#america"><span class="dot">1</span></a>
-        <a href="#europe"><span class="dot">2</span></a>
-        <a href="#africa"><span class="dot">3</span></a>
-        <a href="#asia"><span class="dot">4</span></a>
-        <a href="#oceania"><span class="dot">5</span></a>
-      </div>
-  </div>
-    
-<!-- BANNER AMERICA-->
-
-    <a id="america"></a> <a id="europe"></a> <a id="africa"></a>
+      <a id="america"></a> <a id="europe"></a> <a id="africa"></a>
     <a id="asia"></a><a id="oceania"></a>
-    <section class="main">
+
+    <header class="nav">
+      <img
+        class="logo"
+        src="../../img/AdventureTravel.svg"
+        alt="AdventureTravel"
+      />
+      <img class="burguer" src="../../img/hamburger-menu.svg" alt="menu" />
+      <nav>
+        <ul class="nav-sections">
+          <li><a class="active" >Home</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="main">  
+      <div class="menu">
+        <div class="line"></div>
+        <div class="navigator">
+          <a href="#america"><span class="dot">1</span></a>
+          <a href="#europe"><span class="dot">2</span></a>
+          <a href="#africa"><span class="dot">3</span></a>
+          <a href="#asia"><span class="dot">4</span></a>
+          <a href="#oceania"><span class="dot">5</span></a>
+        </div>
+      </div>
+      
+      <!-- BANNER AMERICA-->
       <div class="banner america">
         <div class="content">
           <div class="background">
@@ -98,9 +115,9 @@
         </div>
       </div>
 
-<!-- BANNER EUROPE-->
+      <!-- BANNER EUROPE-->
 
-           <div class="banner europe">
+      <div class="banner europe">
         <div class="content">
           <div class="background">
             <img src="../../img/europe/background.jpg" alt="" />
@@ -111,9 +128,10 @@
             <div class="info">
               <h1 class="title">Europe</h1>
               <p class="description">
-                The heart of America beats through towering forests, rolling fields, highland deserts, and unconventional heavenly beaches.
-                In addition, this continent has three wonders of the modern
-                world.
+                Europe is a continent to discover, to explore many of the most 
+                beautiful cities in the world, from the oldest to the most modern. 
+                Visiting Europe is one of the most exciting experiences that every 
+                heart traveler should experience.
               </p>
               <button class="cta">
                 <span>Explore</span>
@@ -162,9 +180,9 @@
         </div>
       </div>
 
-      <!-- BANNER AFRICA-->
+    <!-- BANNER AFRICA-->
 
-      <div class="banner africa">
+    <div class="banner africa">
       <div class="content">
         <div class="background">
           <img src="../../img/africa/background.jpg" alt="" />
@@ -239,9 +257,9 @@
             <div class="info">
               <h1 class="title">Asia</h1>
               <p class="description">
-                The heart of America beats through towering forests, rolling fields, highland deserts, and unconventional heavenly beaches.
-                In addition, this continent has three wonders of the modern
-                world.
+                Asia is an excellent opportunity to learn about ancient cultures, 
+                exotic nature, traditions, unique and unforgettable landscapes, an 
+                incredible opportunity to continue knowing the world.
               </p>
               <button class="cta">
                 <span>Explore</span>
@@ -303,9 +321,9 @@
             <div class="info">
               <h1 class="title">Oceania</h1>
               <p class="description">
-                The heart of America beats through towering forests, rolling fields, highland deserts, and unconventional heavenly beaches.
-                In addition, this continent has three wonders of the modern
-                world.
+                Oceania is a continent that brings together the most 
+                beautiful places on the planet. It extends into all of the Pacific Ocean.
+                Oceania is an ideal place for those who want to live exciting adventures-discovered.
               </p>
               <button class="cta">
                 <span>Explore</span>
@@ -354,11 +372,87 @@
         </div>
         </div>
     </section>
+    <a class="section-services" id="tour"></a>
+    <a class="section-services" id="travel"></a>
+    <a class="section-services" id="hotel"></a>
+    
     <section class="services">
-      <div class="background">
-        <img src="../../img/asia/background.jpg" alt="" />
+      <div class="content">
+        <div class="service tour">
+          <div class="background">
+            <img src="../../img/services/tour/background.jfif" alt="" />
+          </div>
+          <div class="filter"></div>
+          <div class="navigator">
+            <a  href="#travel" class="next button"><img src="../../img/next.svg" alt=""></a>
+          </div>
+          <div class="info">
+            <h1 class="shadow">Tour</h1>
+            <h2 class="title">Nature Tour</h2>
+            <p class="description">Encourage to know the best natural tours and enjoy its essence.</p>
+            <a href="/src/views/Services.html#tour" class="cta">
+              <p>See more</p>
+              <img src="../../img/arrow.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="service travel">
+          <div class="background">
+            <img src="../../img/services/travel/background.jpg" alt="" />
+          </div>
+          <div class="filter"></div>
+          <div class="navigator">
+            <a href="#tour" class="prev button"><img src="../../img/back.svg" alt=""></a>
+            <a href="#hotel" class="next button"><img src="../../img/next.svg" alt=""></a>
+          </div>
+          <div class="info">
+            <h1 class="shadow">Travel</h1>
+            <h2 class="title">Nature Travel</h2>
+            <p class="description">Live incredible experience traveling in the most comfortable way for you.</p>
+            <a href="/src/views/Services.html#travel" class="cta">
+              <p>See more</p>
+              <img src="../../img/arrow.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="service hotel">
+          <div class="background">
+            <img src="../../img/services/hotel/background.jpg" alt="" />
+          </div>
+          <div class="filter"></div>
+          <div class="navigator">
+            <a href="#travel" class="prev button"><img src="../../img/back.svg" alt=""></a>
+          </div>
+          <div class="info">
+            <h1 class="shadow">Hotel</h1>
+            <h2 class="title">Select Hotel</h2>
+            <p class="description">Discover your perfect hotel to enjoy the best experience.</p>
+            <a href="/src/views/Services.html#hotel" class="cta">
+              <p>See more</p>
+              <img src="../../img/arrow.svg" alt="">
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="filter"></div>
+    </section>
+    <section class="about">
+      <div class="content">
+          <div class="background">
+            <img src="../../img/about.jpg" alt="" />
+          </div>
+          <div class="filter"></div>
+          <div class="info">
+            <h2 class="title">Hello, we’re a different way of traveling</h2>
+            <p class="description">We are a travel agency committed to 
+              providing our clients with the best value and quality on 
+              each trip, offering the best possible experience and 
+              committing ourselves to values, integrity and dedication 
+              to customer service. We seek to offer the attention and 
+              security that our clients deserve, as well as offering 
+              accessible and excellent options that adapt to the needs 
+              of each one.</p>
+          </div>
+      </div>
     </section>
   </body>
 <script>

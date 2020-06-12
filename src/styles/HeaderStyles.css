@@ -1,64 +1,63 @@
-
-.nav-sections li a{
-    font-family: "Montserrat", sans-serif;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.0625em;
-    font-weight: 500;
-    text-decoration: none;
-    margin: 0% 2%;
+.nav-sections li a {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.0625em;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0% 2%;
 }
 
 .nav-sections li .active {
-    color: white;
+  color: white;
 }
 
 .nav-sections li a:hover {
-    color: white;
+  color: white;
 }
 
 nav {
-    width: 100%;
-    text-align: right;
+  width: 100%;
+  text-align: right;
 }
 
 .burguer {
-    display: none;
+  display: none;
 }
 
 .nav {
-    display: flex;
-    position: fixed;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1% 0.5%;
-    width: 100%;
-    z-index: 3;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 0.5%;
+  width: 100%;
+  z-index: 3;
 }
 
 .logo {
-    margin: 1.5% 4%;
-    cursor: pointer;
-    width: 13em;
-    height: 3em;
+  margin-left: 2em;
+  margin-top: 1em;
+  cursor: pointer;
+  width: 10em;
 }
 
-.nav-sections  {
-    list-style: none;
+.nav-sections {
+  list-style: none;
 }
 
 .nav-sections li {
-    display: inline;
-    padding: 0% 1%;
+  display: inline;
+  padding: 0% 1%;
 }
 
 @media only screen and (max-width: 425px) {
-    nav {
-        display: none;
-    }   
+  nav {
+    display: none;
+  }
 
-    .burguer {
-        display: block;
-        height: 60%;
-        padding: 0% 5%;
-    }
+  .burguer {
+    display: block;
+    height: 60%;
+    padding: 0% 5%;
+  }
 }
